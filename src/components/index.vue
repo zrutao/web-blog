@@ -5,7 +5,7 @@
       <div class="home_userinfoContainer">
         <el-dropdown @command="handleCommand">
   <span class="el-dropdown-link home_userinfo">
-    管理员<i class="el-icon-arrow-down el-icon--right home_userinfo"></i>
+    超级管理员<i class="el-icon-arrow-down el-icon--right home_userinfo"></i>
   </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="sysMsg">系统消息</el-dropdown-item>
@@ -24,14 +24,30 @@
           <template>
             <el-submenu index="1">
               <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>首页</span>
+                <i class="el-icon-document"></i>
+                <span>文章管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+                <el-menu-item index="ArticleList">文章列表</el-menu-item>
+                <el-menu-item index="1-2">发表文章</el-menu-item>
               </el-menu-item-group>
             </el-submenu>
+            <el-menu-item index="2">
+                <i class="el-icon-user"></i>
+                <span slot="title">用户管理</span>
+           </el-menu-item>
+            <el-menu-item index="3">
+                 <i class="el-icon-s-fold"></i>
+                 <span slot="title">栏目管理</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+                 <i class="el-icon-s-data"></i>
+                 <span slot="title">数据分析</span>
+            </el-menu-item>
+            <el-menu-item index="5">
+                 <i class="el-icon-s-custom"></i>
+                 <span slot="title">角色管理</span>
+            </el-menu-item>
           </template>
         </el-menu>
       </el-aside>
